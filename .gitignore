@@ -12,3 +12,4 @@ Cargo.lock
 
 # Added by .nXoji
 .env
+.vscode/tasks.json
