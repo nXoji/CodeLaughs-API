@@ -1,6 +1,7 @@
 use actix_web::web;
 
 mod handlers;
+mod parse_data;
 
 // Initialize the api routes, all the routes are under `/api`
 pub fn init_routes(cfg: &mut web::ServiceConfig) {
