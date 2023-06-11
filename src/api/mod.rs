@@ -8,5 +8,6 @@ pub fn init_routes(cfg: &mut web::ServiceConfig) {
     cfg.service(
         web::scope("/api")
             .route("/get_meme", web::get().to(handlers::get_image))
+            .route("/create_token/{pass}", web::get().to(handlers::create_token))
     );
 }
