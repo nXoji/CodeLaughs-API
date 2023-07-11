@@ -15,7 +15,7 @@ async fn main() -> std::io::Result<()> {
     let port = std::env::var("PORT").unwrap_or_else(|_| "8080".to_owned());
     let addr = format!("{}:{}", host, port);
 
-    println!("API is available at <http://{addr}/api/get_meme>");
+    println!("API is available at <http://{addr}/api/>");
 
     HttpServer::new(|| {
         App::new()
