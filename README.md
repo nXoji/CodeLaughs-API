@@ -13,11 +13,6 @@
   </p>
 </div>
 
-# Documentation
-To use CodeLaughs-API, you can send HTTP requests to the API endpoints. Here are the available endpoints:
-- `/ping`: to check the functionality
-* `/api/get_meme`: to get random meme
-
 # Installation
 1. Clone the repository:
 ```
@@ -27,11 +22,22 @@ git clone https://github.com/nXoji/CodeLaughs-API.git
 ```
 HOST=127.0.0.1
 PORT=8080
+ROOT_PASS=qwerty1234
+MONGODB_URI={your mongodb url}
+DATABASE_NAME=CodeLaughs-API (your databse name)
+COLLECTION_NAME=tokens (your collection name)
 ```
 3. Start the project:
 ```
 cargo run
 ```
-
+---
+# Documentation
+To use CodeLaughs-API, you can send HTTP requests to the API endpoints. Here are the available endpoints:
+- `/ping`: Use this endpoint to check the functionality of the API.
+* `/api/get_meme`: Use this endpoint to get a random meme. Please include the following headers in your request:
+  * `X-API-Key`: Include your API key in this header to authenticate the request.
++ `/api/create_token/{pass}`: Use this endpoint to generate new tokens. Replace {pass} with your root password. This endpoint will create and return new tokens that can be used for authentication.
+---
 # License
 CodeLaughs-API is open source software under the [MIT License](https://opensource.org/license/mit/).
